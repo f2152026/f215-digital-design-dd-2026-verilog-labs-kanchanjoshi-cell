@@ -1,3 +1,4 @@
+
 // dut.v
 // Wrapper module: pick exactly ONE of the three implementations below by
 // leaving it uncommented, with the other two commented out. Compile and
