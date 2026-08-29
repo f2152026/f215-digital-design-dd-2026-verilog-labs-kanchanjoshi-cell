@@ -21,6 +21,10 @@
 
 // Gate-level model of a 1-bit full adder with rise/fall delays.
 
+// FA_Gate.v
+
+// Gate-level model of a 1-bit full adder with explicit rise/fall delays.
+
 module FA_Gate(
 
   input  a,
@@ -34,7 +38,9 @@ module FA_Gate(
 
   wire ps, pc1, pc2;
 
-  // rise delay = 2, fall delay = 3
+  // Part (b): rise/fall delays
+  // rise delay = 2
+  // fall delay = 3
 
   xor #(2,3) (ps,  a,   b);
   and #(2,3) (pc1, a,   b);
