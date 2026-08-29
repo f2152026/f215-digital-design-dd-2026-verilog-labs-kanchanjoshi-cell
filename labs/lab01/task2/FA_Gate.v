@@ -17,14 +17,24 @@
 // gates are rarely symmetric this way. Re-simulate with the SAME
 // ripple_adder.v and tb.v; nothing else needs to change.
 
+// FA_Gate.v
+
+// Gate-level model of a 1-bit full adder with rise/fall delays.
+
 module FA_Gate(
+
   input  a,
   input  b,
   input  cin,
+
   output sum,
   output cout
+
 );
+
   wire ps, pc1, pc2;
+
+  // rise delay = 2, fall delay = 3
 
   xor #(2,3) (ps,  a,   b);
   and #(2,3) (pc1, a,   b);
