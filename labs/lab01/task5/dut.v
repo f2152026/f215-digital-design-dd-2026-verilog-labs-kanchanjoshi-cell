@@ -10,6 +10,7 @@ module dut(
   input         cin,
   output [63:0] sum,
   output        cout
+  
 );
 
   // ---- Bonus: hierarchical (O(log n)) 64-bit carry-lookahead adder ----
