@@ -9,9 +9,12 @@ module mux_df (
   input      I0,
   input      I1,
   input      S,
-  output reg Y
+  output wire Y
 );
 
   assign Y = S ? I1 : I0;
 
 endmodule
+
+//if we do assign Y = something then we use wire but if we do Y = something we use reg Y
+// the ternary operation is same as assign Y = (~S & I0) | (S & I1);
