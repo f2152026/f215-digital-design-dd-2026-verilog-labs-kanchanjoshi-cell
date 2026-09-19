@@ -35,47 +35,33 @@ module tb;
   end
 
   initial begin
-         t_i0 = 0;
-        t_i1 = 0;
-        t_s  = 0;
+
+        {t_i0, t_i1, t_s} = 3'b000;
         #5;
 
-        t_i0 = 0;
-        t_i1 = 0;
-        t_s  = 1;
+        {t_i0, t_i1, t_s} = 3'b001;
         #5;
 
-        t_i0 = 0;
-        t_i1 = 1;
-        t_s  = 0;
+        {t_i0, t_i1, t_s} = 3'b010;
         #5;
 
-        t_i0 = 0;
-        t_i1 = 1;
-        t_s  = 1;
+        {t_i0, t_i1, t_s} = 3'b011;
         #5;
 
-        t_i0 = 1;
-        t_i1 = 0;
-        t_s  = 0;
+        {t_i0, t_i1, t_s} = 3'b100;
         #5;
 
-        t_i0 = 1;
-        t_i1 = 0;
-        t_s  = 1;
+        {t_i0, t_i1, t_s} = 3'b101;
         #5;
 
-        t_i0 = 1;
-        t_i1 = 1;
-        t_s  = 0;
+        {t_i0, t_i1, t_s} = 3'b110;
         #5;
 
-        t_i0 = 1;
-        t_i1 = 1;
-        t_s  = 1;
+        {t_i0, t_i1, t_s} = 3'b111;
         #5;
 
         $finish;
+
     // TODO: apply all 8 combinations of t_i0, t_i1, t_s, 5 time units apart,
     // then $finish. (Same pattern you used in Lab 1's tb.v.)
 
